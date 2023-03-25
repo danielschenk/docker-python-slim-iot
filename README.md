@@ -1,6 +1,7 @@
 # docker-python-slim-iot
 [![docker-image](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/docker-image.yml/badge.svg)](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/docker-image.yml)
 [![CodeQL](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/codeql-analysis.yml)
+
 🐳 A multi-arch Docker image based on the official slim Python image, with essential IoT libs
 
 I created this base image from lessons learned in a couple of my other hobby projects.
