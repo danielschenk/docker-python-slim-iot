@@ -13,7 +13,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 COPY requirements.txt .
 RUN pip install -U --no-cache-dir pip \
-    && STATIC_DEPS=true pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir -r requirements.txt
 
 FROM python:3.11-slim
 
