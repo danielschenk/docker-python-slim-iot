@@ -1,4 +1,10 @@
 # docker-python-slim-iot
+
+> [!WARNING]
+> This project is deprecated and no longer maintained.
+> 32-bit x86 Linux distros don't provide a modern enough `rustc` to build `cryptography`.
+> The remaining architectures now all can pull a pre-built `cryptography` wheel using `pip`.
+
 [![docker-image](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/docker-image.yml/badge.svg)](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/docker-image.yml)
 [![CodeQL](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/danielschenk/docker-python-slim-iot/actions/workflows/codeql-analysis.yml)
 
