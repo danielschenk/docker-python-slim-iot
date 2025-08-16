@@ -1,4 +1,6 @@
-FROM python:3.11 AS compile-image
+ARG PYTHONVERSION
+ARG PYTHONVERSION=3.13
+FROM python:${PYTHONVERSION} AS compile-image
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \
@@ -15,7 +17,7 @@ COPY requirements.txt .
 RUN pip install -U --no-cache-dir pip \
     && pip install --no-cache-dir -r requirements.txt
 
-FROM python:3.11-slim
+FROM python:${PYTHONVERSION}-slim
 
 COPY --from=compile-image /opt/venv /opt/venv
 
