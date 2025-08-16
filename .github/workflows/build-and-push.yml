@@ -40,8 +40,9 @@ jobs:
           type=ref,event=pr,enable=${{ matrix.python-version == env.latest }}
           type=ref,event=branch,suffix=-${{ matrix.python-version }}
           type=ref,event=pr,suffix=-${{ matrix.python-version }}
-          type=match,value=${{ matrix.python-version }},pattern=\d+
-          type=match,value=${{ matrix.python-version }},pattern=\d+\.\d+
+          # python version tags (like official Python image)
+          type=match,enable=${{ startsWith(github.ref, 'refs/tags/v') }},value=${{ matrix.python-version }},pattern=\d+
+          type=match,enable=${{ startsWith(github.ref, 'refs/tags/v') }},value=${{ matrix.python-version }},pattern=\d+\.\d+
           # also provide tag starting with semver of the image itself,
           # in the same way Python devcontainer does it, eg. 1.0-3.13
           type=semver,pattern={{version}},suffix=-${{ matrix.python-version }}
